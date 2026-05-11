@@ -174,3 +174,99 @@ At 98% confidence level, the calculated confidence interval was approximately:
 
 ```text
 5.589 to 5.683
+
+Since the claimed average quality score of 7 was outside this interval, the claim that the average quality is equal to or greater than 7 was not supported by the sample data.
+
+Linear Regression Model
+
+A multiple linear regression model was built using all 11 feature variables to predict the red wine quality score.
+
+The model used the following predictors:
+
+Fixed acidity
+Density
+Citric acid
+Chlorides
+Free sulfur dioxide
+Volatile acidity
+pH
+Alcohol
+Sulphates
+Residual sugar
+Total sulfur dioxide
+
+Model performance:
+
+MSE  = 0.4168
+RMSE = 0.6456
+R2   = 0.3606
+
+The R-square value shows that the linear regression model explained around 36% of the variation in wine quality.
+
+Polynomial Regression
+
+Polynomial regression models were tested using degrees from 1 to 5.
+
+The R-square values improved as the polynomial degree increased:
+
+Degree 1: R2 = 0.3606
+Degree 2: R2 = 0.4346
+Degree 3: R2 = 0.6238
+Degree 4: R2 = 0.9545
+Degree 5: R2 = 0.9998
+
+Although higher-degree polynomial models showed very high R-square values, this may not always be reliable because the model may be overfitting the training data.
+
+To check whether the model can be trusted, it should be evaluated using:
+
+Train-test split
+Cross-validation
+Testing on unseen data
+Comparing training and testing performance
+Checking error metrics such as MSE and RMSE
+
+Key Findings
+
+The main findings from this project were:
+
+Alcohol, sulphates, and citric acid were strongly related to wine quality.
+pH and density approximately followed a Gaussian distribution.
+PCA results changed after normalising the data.
+Total sulfur dioxide was the main contributor to variance before normalisation.
+Fixed acidity, citric acid, and density contributed more after normalisation.
+The linear regression model had moderate predictive performance.
+Polynomial regression improved R-square, but higher-degree models may overfit.
+
+Files in this Repository
+
+This repository includes:
+
+Jupyter Notebook / Colab Notebook
+Red wine dataset
+Project report or PDF
+README documentation
+
+How to Run the Project
+Clone this repository:
+git clone https://github.com/hithaishreesv-coder/Red-Wine-Quality-Analysis.git
+Open the project folder:
+cd Red-Wine-Quality-Analysis
+Install the required Python libraries:
+pip install numpy pandas matplotlib seaborn scikit-learn statsmodels scipy openpyxl
+Open the notebook:
+jupyter notebook
+Run all cells in order.
+
+Conclusion
+
+This project demonstrates how Python can be used for data analysis, statistical testing, PCA, and regression modelling.
+
+The analysis helped identify important features affecting red wine quality and showed how different modelling approaches can be used to predict the quality score.
+
+The project also highlights the importance of normalisation, model evaluation, and checking for overfitting when using advanced regression models.
+
+Author
+
+Hithaishree Salur Vijay
+
+Data Analyst | Power BI | SQL | Python | Machine Learning
